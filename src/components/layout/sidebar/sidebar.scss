@@ -1,0 +1,89 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.main-sidebar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  @include media_1024 {
+    display: none;
+  }
+
+  .toggle-button {
+    position: absolute;
+    right: -10px;
+    top: 18px;
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-purple);
+    z-index: 11;
+
+    svg {
+      transform: rotate(-90deg);
+      transition: transform 0.3s ease-in-out;
+
+      path {
+        fill: var(--white-color);
+      }
+    }
+
+  }
+
+  .ps-sidebar-container {
+    background-color: var(--Clarinet_01265D);
+    border-radius: 0px 22px 22px 0px;
+    // Custom scrollbar styles
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    // Track
+    &::-webkit-scrollbar-track {
+      background: var(--Clarinet_01265D)
+    }
+
+    // Handle
+    &::-webkit-scrollbar-thumb {
+      background: #75869e10;
+    }
+  }
+
+  aside {
+    background-color: #fff;
+
+    &.ps-collapsed {
+      .name {
+        display: none;
+      }
+
+      .sidebar-menus {
+        .sidebar_icon_list {
+          .sidebar_label {
+            justify-content: center;
+
+            .icon {
+              img {
+                height: 22px;
+              }
+            }
+          }
+
+          .ps-submenu-expand-icon {
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,81 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+.filter-wrapper{
+    .filter-container{
+        background-color: #fff;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        overflow-x: auto;
+        .left-side{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            button{
+                color: var(--color_647C9B);
+                font-weight: 600;
+                background-color: var(--light-blue);
+                padding: 7.5px 10px;
+                line-height: 20px;
+                border-radius: 3px;
+                min-width: 120px;
+                align-items: center;
+                font-size: var(--font_16);
+                border: none;
+            }
+            .filter-button{
+                button{
+                    display: flex;
+                    justify-content: space-between;
+                    img{
+                        max-width: 20px;
+                    }
+                }
+            }
+           
+            .reset{
+                button{
+                    @include border_button(16px,var(--theme-purple),6.5px 10px,3px,var(--theme-purple),600);
+                    line-height: 20px;
+                }
+            }
+        }
+        .right-side{
+            .searchbox{
+                display: flex;
+                position: relative;
+                .input-group{
+                    display: flex;
+                    flex-wrap: nowrap;
+                }
+                .searchicon {
+                    position: absolute;
+                    right: 7.5px;
+                    top: 7px;
+                }
+                input{
+                    padding:10px 10px;
+                    border-radius: 3px;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                button{
+                    text-align: left;
+                    &::after{
+                        content: '';
+                        background-image: url(../../../assest/images/icons/downarrow.svg);
+                        border: none;
+                        padding: 10px;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right: 5px;
+                        top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

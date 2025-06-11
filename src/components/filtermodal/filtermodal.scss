@@ -1,0 +1,27 @@
+.filtermodal {
+    .modal_header {
+        border-bottom: 1px solid var(--light-blue);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        .input-main-data {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            align-items: center;
+
+            .label_fieild {
+                width: 45%;
+                label {
+                    color: var(--black-color);
+                    font-weight: 300;
+                }
+            }
+            .input_field {
+                width: 55%;
+            }
+        }
+    }
+}

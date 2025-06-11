@@ -1,0 +1,54 @@
+@use '../../../../assest/scss/abstract/mixins' as *;
+
+.profile-setting-wrapped {
+    display: flex;
+    gap: 21px;
+    align-items: center;
+
+    .profile-section {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+
+        .details {
+            .name {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 18px;
+            }
+
+            .nav-item {
+                a {
+                    color: var(--black-color);
+                    font-size: var(--font_14);
+                    font-weight: 700;
+                    line-height: 17.5px;
+                    display: block;
+                    margin-bottom: 2px;
+                    text-decoration: none;
+                    &::after {
+                        content: unset;
+                    }
+                }
+            }
+
+            .designation {
+                h3 {
+                    font-weight: 400;
+                    font-size: var(--font_12);
+                }
+            }
+        }
+
+        .profile-img {
+            img {
+                height: 40px;
+                width: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid var(--light-blue);
+            }
+        }
+    }
+}

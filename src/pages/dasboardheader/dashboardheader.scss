@@ -1,0 +1,42 @@
+@use '../../assest/scss/abstract/mixins' as *;
+.dashboardheader{
+    padding: 18px 30px;
+    border: 1px solid #DFE9F3;
+    background: var(--white-color);
+    @include media_768{
+        padding: 10px 12px;
+    }
+    .left-side{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .toggle-button{
+            background-color: transparent;
+            display: none;
+            @include media_1024{
+                display: block;
+            }
+        }
+    }
+    .main_heading{
+        h2{
+            margin-bottom: 2px;
+            line-height: 25px;
+        }
+    }
+    .divide-components{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    // .mobile-menu{
+    //     display: none;
+    //   }
+    .right-side{
+        &.profile-setting{
+            @include media_768{
+                display: none;
+             }
+        }
+    }
+}

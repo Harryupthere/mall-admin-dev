@@ -1,0 +1,54 @@
+@use '../../assest/scss/abstract/mixins' as *;
+
+.update-wraped {
+    .update-box {
+        border-radius: 15px;
+        overflow: hidden;
+        width: 33%;
+        @include media_768 {
+            width:50%;
+        }
+        @include media_576 {
+            width:100%;
+        }
+
+        .card_header {
+            padding: 15px;
+            background-color: var(--theme-purple);
+            color: #fff;
+            h2{
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 18px;
+                margin: 0;
+            }
+        }
+
+        .card_body {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius:0 0 15px 15px;
+            h3{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            p{
+                color: var(--color_2D3748);
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+.node__root > circle {
+  fill: #00c853;
+}
+.node__branch > circle {
+  fill: #0288d1;
+}
+.node__leaf > circle {
+  fill: #ff9800;
+}

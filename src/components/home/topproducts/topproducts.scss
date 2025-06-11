@@ -1,0 +1,32 @@
+.top-product-table {
+    .main_heading{
+        h2{
+            color: var(--color_05004E);
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+    }
+    .data-table-wrapped {
+        .data-table-container {
+            table {
+                th {
+                    background-color: var(--white-color);
+                    color: var(--color_647C9B);
+                    font-weight: 400;
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+                td{
+                    padding: 9px 0;
+                    max-width: 350px;
+                    min-width: 55px;
+                    font-weight: 400;
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}

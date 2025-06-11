@@ -1,0 +1,156 @@
+@use '../../assest/scss/abstract/mixins' as *;
+
+.dashboard-wrapped {
+    &.main-container {
+        .card-grid {
+            display: flex;
+            // flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+
+            .card-box {
+                width: calc(25% - 20px);
+
+                @include media_768 {
+                    width: calc(50% - 20px);
+                }
+
+                @include media_576 {
+                    width: 100%;
+                }
+
+                .item {
+                    height: 120px;
+
+                }
+            }
+        }
+
+        .theme-card {
+            position: relative;
+
+            .card-title {
+                // margin-bottom: 20px;
+                padding: 15px;
+
+                h3 {
+                    color: var(--color_202224);
+                    font-weight: 500;
+                    font-size: var(--font_18);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .graph-row {
+            display: flex;
+            gap: 15px;
+
+            @include media_768 {
+                flex-direction: column;
+            }
+
+            .left-side {
+                width: 65%;
+
+                @include media_768 {
+                    width: 100%;
+                }
+            }
+
+            .right-side {
+                width: 35%;
+
+                @include media_768 {
+                    width: 100%;
+                }
+            }
+        }
+
+        .graph-row-3 {
+            display: flex;
+            gap: 15px;
+
+            @include media_768 {
+                flex-direction: column;
+            }
+
+            .box-row {
+                display: flex;
+                gap: 15px;
+
+            }
+
+            .box1 {
+                width: 50%;
+                @include media_768 {
+                    width: 100%;
+                }
+            }
+
+            .box2 {
+                width: 50%;
+
+                @include media_768 {
+                    width: 100%;
+                }
+            }
+
+            .box3 {
+                width: 50%;
+                @include media_768 {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .claim-box {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+
+            .item {
+                width: calc(50% - 10px);
+                padding: 10px;
+                text-align: center;
+                border: 1px solid #8258ff4b;
+                border-radius: 10px;
+
+                h3 {
+                    font-size: 30px;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                }
+
+                .info {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    margin-bottom: 10px;
+
+                    p {
+                        margin: 0;
+                        font-size: 12px;
+                    }
+                }
+
+                .purple-btn {
+                    background-color: var(--theme-purple);
+                    color: var(--white-color);
+                    padding: 10px;
+                    border-radius: 50px;
+                    width: 100%;
+
+                    &:disabled {
+                        background-color: var(--color_2D3748);
+                    }
+                }
+            }
+        }
+    }
+}

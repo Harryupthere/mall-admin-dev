@@ -1,0 +1,109 @@
+.input-main-data {
+    position: relative;
+
+    label {
+        color: var(--black-color);
+        display: block;
+        font-weight: 600;
+        font-size: var(--font_16);
+        margin-bottom: 6px;
+
+        @include media_1600 {
+            font-size: var(--font_14);
+        }
+        @include media_1280 {
+            font-size: var(--font_12);
+        }
+        .asterisk {
+            font-size: var(--font_16);
+            color: #F44336;
+
+            @include media_1600 {
+                font-size: var(--font_14);
+            }
+            @include media_1280 {
+                font-size: var(--font_12);
+            }
+        }
+    }
+
+    input,
+    textarea {
+        border: 1px solid var(--light-blue);
+        font-weight: 300;
+        font-size: var(--font_16);
+        color: var(--black-color);
+        border-radius: 3px;
+        padding: 10px;
+        width: 100%;
+        outline: none;
+        @include media_1600 {
+            font-size: var(--font_14);
+            padding: 8px;
+        }
+        @include media_1280 {
+            font-size: var(--font_12);
+        }
+    }
+
+    select {
+        word-wrap: normal;
+        border: 1px solid var(--light-blue);
+        font-weight: 300;
+        font-size: var(--font_16);
+        color: var(--black-color);
+        border-radius: 3px;
+        padding: 10px;
+        width: 100%;
+        outline: none;
+
+        @include media_1600 {
+            font-size: var(--font_14);
+        }
+
+        &:focus {
+            border-color: var(--orange-color);
+        }
+    }
+
+    &.select-mui-vs {
+        .MuiOutlinedInput-root {
+            // border: 1px solid var(--light-blue) !important;
+            font-weight: 300;
+            font-size: var(--font_16);
+            color: var(--black-color);
+            border-radius: 3px;
+            padding: 10px;
+            width: 100%;
+            outline: none;
+            padding: 0 !important;
+            font-family: var(--Quicksand);
+
+            @include media_1600 {
+                font-size: var(--font_14);
+            }
+        }
+
+        .MuiAutocomplete-input {
+            padding-right: 30px !important;
+
+            @include media_1600 {
+                font-size: var(--font_14);
+                padding: 5px 4px 5px 5px;
+            }
+
+            @include media_1280 {
+                font-size: var(--font_12);
+            }
+        }
+
+        .MuiOutlinedInput-notchedOutline {
+            border: none;
+        }
+
+        // .Mui-focused .MuiOutlinedInput-notchedOutline {
+        //     border: 1px solid var(--orange-color);
+        // }
+
+    }
+}

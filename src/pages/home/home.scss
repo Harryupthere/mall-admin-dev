@@ -1,0 +1,131 @@
+@use '../../assest/scss/abstract/mixins' as *;
+
+.home-wrapped {
+    .data-cards {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        
+        @include media_480 {
+            gap: 10px;
+        }
+        
+        @include media_480 {
+         margin-bottom: 10px;
+        }
+        .card-rows {
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+
+            @include media_480 {
+                flex: 1 1 100%;
+                max-width: 100%;
+                gap: 10px;
+            }
+
+            &.row-1 {
+                .card_icon {
+                    height: 100px;
+                    @include media_1280{
+                        height: 100%;
+                    }
+
+                    img {
+                        // height: 100%;
+                        max-width: 75px;
+                        margin-left: auto;
+                        display: flex;
+                        @include media_1280{
+                           max-width: 50px;
+                         }
+                    }
+                }
+            }
+
+            &.row-2 {
+                flex: 1 1 calc(20% - 20px);
+                max-width: calc(20% - 20px);
+                @include media_991 {
+                    flex: 1 1 calc(33.33% - 20px);
+                    max-width: calc(33.33% - 20px);
+                }
+                .card_icon {
+                    img {
+                        max-width: 60px;
+                        margin-left: auto;
+                        display: flex;
+                    }
+                }
+
+                @include media_991 {
+                    flex: 1 1 calc(33.333% - 20px);
+                    max-width: calc(33.333% - 20px);
+                }
+
+                @include media_480 {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                }
+
+                .upperbody {
+                    display: flex;
+                    justify-content: space-between;
+                    .heading_text {
+                        .card_data{
+                            margin-bottom: 25px;
+                            @include media_1600{
+                                margin-bottom: 10px;
+                             }
+                        }
+                    }
+                }
+
+                .item {
+                    box-shadow: 6px 6px 54px 0px #0000000D;
+                    padding: 24px;
+                    @include media_1600{
+                       padding: 15px;
+                    }
+                    @include media_1280{
+                        padding: 12px;
+                     }
+                }
+            }
+
+            .commoncard-wrapped {
+                height: 100%;
+
+                .item {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .third-row {
+        display: flex;
+        gap: 20px;
+
+        @include media_991 {
+            flex-direction: column;
+        }
+
+        .chart-wrapped {
+            width: 70%;
+
+            @include media_991 {
+                width: 100%;
+            }
+        }
+
+        .products-wrapped {
+            width: 40%;
+            padding: 20px;
+
+            @include media_991 {
+                width: 100%;
+            }
+        }
+    }
+}
